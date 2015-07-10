@@ -51,14 +51,14 @@
         }
         jsonDict = dict;
     }
-    NSString *expiresIn = [jsonDict objectForKey:@"expires_in"];
-    NSString *anAccessToken = [jsonDict objectForKey:@"access_token"];
-    NSString *aRefreshToken = [jsonDict objectForKey:@"refresh_token"];
-    NSString *scopeString = [jsonDict objectForKey:@"scope"];
+    NSString *expiresIn = [jsonDict objectForKey:@"Expires"];//expires_in
+    NSString *anAccessToken = [jsonDict objectForKey:@"AccessToken"]; //access_token
+    NSString *aRefreshToken = [jsonDict objectForKey:@"RefreshToken"]; //refresh_token
+    NSString *scopeString = [jsonDict objectForKey:@"Scope"];
     
     // if the response overrides token_type we take it from the response
-    if ([jsonDict objectForKey:@"token_type"]) {
-        tokenType = [jsonDict objectForKey:@"token_type"];
+    if ([jsonDict objectForKey:@"TokenType"]) { //token_type
+        tokenType = [jsonDict objectForKey:@"TokenType"];
     }
     
     NSSet *scope = nil;
